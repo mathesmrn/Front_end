@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Feliz Dia dos Namorados Paixão</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:#0f0f0f;
+    color:white;
+    overflow-x:hidden;
+}
+
+body::before{
+    content:"";
+    position:fixed;
+    inset:0;
+    background:
+    radial-gradient(circle at top,#ff4f8b25,transparent 50%);
+    z-index:-2;
+}
+
+.hero{
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:30px;
+    animation:fadeIn 2s ease;
+}
+
+.hero h1{
+    font-size:4rem;
+    color:#ff4f8b;
+    text-shadow:0 0 20px #ff4f8b;
+}
+
+.hero p{
+    max-width:700px;
+    margin-top:20px;
+    font-size:1.2rem;
+    color:#ffc0d6;
+}
+
+.btn{
+    margin-top:30px;
+    padding:15px 35px;
+    border:none;
+    border-radius:50px;
+    background:#ff4f8b;
+    color:white;
+    cursor:pointer;
+    font-size:1rem;
+    transition:.3s;
+}
+
+.btn:hover{
+    transform:scale(1.1);
+    box-shadow:0 0 25px #ff4f8b;
+}
+
+.section-title{
+    text-align:center;
+    color:#ff4f8b;
+    font-size:2.5rem;
+    margin:50px 0;
+}
+
+.carousel-container{
+    overflow:hidden;
+    width:100%;
+    padding:40px 0;
+}
+
+.carousel-track{
+    display:flex;
+    gap:30px;
+    width:max-content;
+    animation:scroll 40s linear infinite;
+}
+
+.polaroid{
+    width:280px;
+    background:white;
+    padding:15px 15px 60px;
+    border-radius:5px;
+    box-shadow:0 10px 30px rgba(0,0,0,.5);
+    transition:.4s;
+}
+
+.polaroid:hover{
+    transform:translateY(-10px) rotate(0deg);
+}
+
+.polaroid:nth-child(odd){
+    transform:rotate(-4deg);
+}
+
+.polaroid:nth-child(even){
+    transform:rotate(4deg);
+}
+
+.polaroid img{
+    width:100%;
+    height:300px;
+    object-fit:cover;
+    background:#ddd;
+}
+
+.polaroid p{
+    text-align:center;
+    margin-top:15px;
+    color:#333;
+    font-weight:600;
+}
+
+.message{
+    max-width:900px;
+    margin:80px auto;
+    padding:40px;
+    border:2px solid #ff4f8b;
+    border-radius:20px;
+    text-align:center;
+    background:#1b1b1b;
+    box-shadow:0 0 30px rgba(255,79,139,.3);
+}
+
+.message h2{
+    color:#ff4f8b;
+    margin-bottom:20px;
+}
+
+.message p{
+    line-height:1.8;
+    color:#ffd9e7;
+}
+
+.counter{
+    text-align:center;
+    margin:100px 20px;
+}
+
+.counter h2{
+    color:#ff4f8b;
+    margin-bottom:30px;
+}
+
+.time{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:20px;
+}
+
+.box{
+    background:#1b1b1b;
+    padding:25px;
+    min-width:120px;
+    border-radius:15px;
+    border:1px solid #ff4f8b;
+}
+
+.box span{
+    display:block;
+    font-size:2rem;
+    color:#ff4f8b;
+    font-weight:bold;
+}
+
+footer{
+    text-align:center;
+    padding:50px 20px;
+    color:#ffc0d6;
+}
+
+.heart{
+    position:fixed;
+    bottom:-50px;
+    color:#ff4f8b;
+    animation:float linear forwards;
+    pointer-events:none;
+}
+
+@keyframes float{
+    to{
+        transform:translateY(-120vh);
+        opacity:0;
+    }
+}
+
+@keyframes scroll{
+    from{
+        transform:translateX(0);
+    }
+    to{
+        transform:translateX(-50%);
+    }
+}
+
+@keyframes fadeIn{
+    from{
+        opacity:0;
+        transform:translateY(30px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+@media(max-width:768px){
+
+.hero h1{
+    font-size:2.5rem;
+}
+
+.polaroid{
+    width:220px;
+}
+
+.polaroid img{
+    height:240px;
+}
+
+}
+
+</style>
+</head>
+<body>
+
+<section class="hero">
+    <h1>Feliz Dia dos Namorados Paixão</h1>
+    <p>
+        Isto é para nozes meu amorzinho.
+    </p>
+
+    <button class="btn" onclick="document.getElementById('fotos').scrollIntoView({behavior:'smooth'})">
+        Parte da nossa História
+    </button>
+</section>
+
+<h2 class="section-title" id="fotos">Parte das nossas memórias</h2>
+
+<div class="carousel-container">
+    <div class="carousel-track">
+
+        <!-- PRIMEIRO BLOCO -->
+
+        <div class="polaroid">
+            <img src="imagens/Começo1.jfif" alt="">
+            <p>Nosso começo</p>
+        </div>
+
+        <div class="polaroid">
+            <img src="imagens/começo.jfif" alt="">
+            <p>Juntos</p>
+        </div>
+
+        <div class="polaroid">
+            <img src="imagens/familia.jfif" alt="">
+            <p>nossos filhos</p>
+        </div>
+
+        <div class="polaroid">
+            <img src="imagens/Cristo.jfif" alt="">
+            <p>Nossa Primeira viagem pra fora de recife</p>
+        </div>
+
+        <div class="polaroid">
+            <img src="imagens/Cantora.jfif" alt="">
+            <p>Show da Taylor</p>
+        </div>
+
+        <div class="polaroid">
+            <img src="imagens/Aquario.jfif" alt="">
+            <p>Lugar legal</p>
+        </div>
+
+        <div class="polaroid">
+            <img src="imagens/você.jfif" alt="">
+            <p>Você</p>
+        </div>
+
+        <div class="polaroid">
+            <img src="imagens/Eu.jfif" alt="">
+            <p>Eu</p>
+        </div>
+
+        <div class="polaroid">
+            <img src="imagens/nozes.jfif" alt="">
+            <p>nozes</p>
+        </div>
+
+        <div class="polaroid">
+            <img src="imagens/lagarto.jfif" alt="">
+            <p>Nossa pose favorita</p>
+        </div>
+
+        <!-- DUPLICAÇÃO PARA LOOP -->
+
+        <div class="polaroid">
+            <img src="imagens/Começo1.jfif" alt="">
+            <p>Nosso começo</p>
+        </div>
+
+        <div class="polaroid">
+            <img src="imagens/começo.jfif" alt="">
+            <p>Juntos</p>
+        </div>
+
+        <div class="polaroid">
+            <img src="imagens/familia.jfif" alt="">
+            <p>nossos filhos</p>
+        </div>
+
+        <div class="polaroid">
+            <img src="imagens/Cristo.jfif" alt="">
+            <p>Nossa Primeira viagem pra fora de recife</p>
+        </div>
+
+        <div class="polaroid">
+            <img src="imagens/Cantora.jfif" alt="">
+            <p>Show da Taylor</p>
+        </div>
+
+        <div class="polaroid">
+            <img src="imagens/Aquario.jfif" alt="">
+            <p>Lugar legal</p>
+        </div>
+
+        <div class="polaroid">
+            <img src="imagens/você.jfif" alt="">
+            <p>Você</p>
+        </div>
+
+        <div class="polaroid">
+            <img src="imagens/Eu.jfif" alt="">
+            <p>Eu</p>
+        </div>
+
+        <div class="polaroid">
+            <img src="imagens/nozes.jfif" alt="">
+            <p>nozes</p>
+        </div>
+
+        <div class="polaroid">
+            <img src="imagens/lagarto.jfif" alt="">
+            <p>Nossa pose favorita</p>
+        </div>
+
+    </div>
+</div>
+
+<section class="message">
+    <h2>Uma mensagem para você amor</h2>
+
+    <p>
+        Obrigado por estar todos os dias comigo meu amor,
+        você e tudo de mais precioso que eu poderia ter no mundo,
+        fico muito feliz de dormir e acordar todos os dias ao seu lado,
+        espero que junto continuemos superando os desafios e as dificuldades
+        encontradas pelo caminho, e que vamos virar um casal de idosos muito felizes.
+        <br><br>
+        Te amo mais que tudo meu amor, um beijo pra você.
+    </p>
+</section>
+
+<footer>
+    Feito com muito amor, para o meu amor.
+</footer>
+
+<script>
+
+setInterval(updateCounter,1000);
+updateCounter();
+
+function createHeart(){
+
+    const heart = document.createElement("div");
+
+    heart.classList.add("heart");
+
+    heart.innerHTML = ["❤️","💕","💖","💗"][Math.floor(Math.random()*4)];
+
+    heart.style.left = Math.random()*100 + "vw";
+
+    heart.style.fontSize =
+        (Math.random()*25 + 15) + "px";
+
+    heart.style.animationDuration =
+        (Math.random()*5 + 5) + "s";
+
+    document.body.appendChild(heart);
+
+    setTimeout(()=>{
+        heart.remove();
+    },10000);
+}
+
+setInterval(createHeart,500);
+
+// Cursor de corações
+
+document.addEventListener("mousemove",(e)=>{
+
+    const heart = document.createElement("div");
+
+    heart.innerHTML="💖";
+
+    heart.style.position="fixed";
+    heart.style.left=e.clientX+"px";
+    heart.style.top=e.clientY+"px";
+    heart.style.pointerEvents="none";
+    heart.style.fontSize="12px";
+    heart.style.opacity="0.8";
+
+    document.body.appendChild(heart);
+
+    setTimeout(()=>{
+        heart.remove();
+    },800);
+
+});
+
+</script>
+
+</body>
+</html>
